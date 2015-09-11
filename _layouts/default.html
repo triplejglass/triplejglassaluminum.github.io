@@ -9,20 +9,34 @@
   <meta name="author" content="">
   <link rel="icon" href="/favicon.ico"/>
   <link rel="stylesheet" href="{{ page.css }}">
+  <link rel="stylesheet" href="/css/material-fullpalette.min.css">
+  <link rel="stylesheet" href="/css/ripples.min.css">
 
   <title>PHWash | {{ page.title }}</title>
-  <script type="text/javascript" src="/js/lib/respond.min.js"></script>
   <script type="text/javascript" src="/js/lib/jquery-1.11.3.js"></script>
-  <script type="text/javascript" src="/js/lib/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/lib/jquery.sticky.js"></script>
-  <script type="text/javascript" src="/js/lib/main.js"></script>
+
   <script type="text/javascript" src="/js/lib/scrollReveal.min.js"></script>
+  <script type="text/javascript" src="/js/lib/respond.min.js"></script>
+
+  <script type="text/javascript" src="/js/lib/bootstrap.min.js"></script>
+
+
+  <script type="text/javascript" src="/js/lib/material.min.js"></script>
+  <script type="text/javascript" src="/js/lib/ripples.min.js"></script>
+
+  <script type="text/javascript" src="/js/lib/main.js"></script>
 
 </head>
-<body id="mock">
+<body>
+{% include navbar.html %}
 {{ content }}
-{% include footer.html %}
+<!--{% include footer.html %}-->
 {{ page.javascripts }}
-
+<script>
+  $(function() {
+    $.material.init();
+  });
+</script>
 </body>
 </html>
